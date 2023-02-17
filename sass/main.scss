@@ -11,12 +11,35 @@
 body {
     font-family: $text-font;
     overflow-x: hidden;
+    background-color: $color-bg;
 }
 
 .container {
     max-width: 1106px;
     padding: 0 15px;
     margin: 0 auto
+}
+
+.btn {
+    max-width: 180px;
+    height: 53px;
+    background-color: $yellow-color;
+    cursor: pointer;
+    padding: 14px 39px;
+    font-size: 15px;
+    line-height: 25px;
+    font-family: $title-font;
+    color: $main-color;
+    border: none
+}
+
+.btn:hover {
+    border: 3px solid #FCB72B;
+    background-color: $color-bg;
+    color: $yellow-color;
+    transition: 0.5s;
+    text-align: center;
+    max-width: 100%;
 }
 
 @import'./all-blocks/all-blocks';

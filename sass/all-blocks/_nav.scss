@@ -1,0 +1,355 @@
+                                                                    nav {
+                                                                        position: fixed;
+                                                                        width: 100%;
+                                                                        top: 0;
+                                                                        box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 5%);
+                                                                        background-color: $color-bg;
+                                                                        z-index: 3;
+                                                                    }
+                                                                    
+                                                                    .nav {
+                                                                        @include centreItems;
+                                                                        justify-content: space-between;
+                                                                        padding: 36px 0;
+                                                                        &__check {
+                                                                            display: none;
+                                                                        }
+                                                                        &__lable {
+                                                                            display: none;
+                                                                            @include mobile() {
+                                                                                display: block;
+                                                                            }
+                                                                        }
+                                                                        @include mobile() {
+                                                                            max-width: 60%;
+                                                                            justify-content: space-between;
+                                                                        }
+                                                                        &__input {
+                                                                            display: none;
+                                                                        }
+                                                                        &__link-logo {
+                                                                            max-width: 107.82px;
+                                                                            max-height: 28.56px;
+                                                                            @include mobile() {}
+                                                                        }
+                                                                        &__menus {
+                                                                            @include centreItems;
+                                                                            justify-content: space-between;
+                                                                            width: 80%;
+                                                                            @include mobile() {
+                                                                                flex-direction: column;
+                                                                                background-color: #333A44;
+                                                                                position: fixed;
+                                                                                max-width: 256px;
+                                                                                top: 105px;
+                                                                                height: 485px;
+                                                                                padding-top: 64px;
+                                                                                padding-bottom: 24px;
+                                                                                padding-left: 32px;
+                                                                                align-items: baseline;
+                                                                                left: -100%;
+                                                                            }
+                                                                            &-menu {
+                                                                                @include centreItems;
+                                                                                column-gap: 32px;
+                                                                                @include mobile() {
+                                                                                    flex-direction: column;
+                                                                                    row-gap: 24px;
+                                                                                    align-items: baseline;
+                                                                                }
+                                                                                &--link {
+                                                                                    font-family: $title-font;
+                                                                                    font-size: 15px;
+                                                                                    line-height: 25px;
+                                                                                    text-decoration: none;
+                                                                                    color: #939CAA;
+                                                                                    @include mobile() {
+                                                                                        color: #E5ECF4;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    
+                                                                    .nav__input:checked~.nav__menus {
+                                                                        left: 0%;
+                                                                        transition: 0.5s;
+                                                                    }
+                                                                    
+                                                                    .nav__input:checked~.nav__check {
+                                                                        display: block;
+                                                                        justify-content: start;
+                                                                    }
+                                                                    
+                                                                    .nav__input:checked~.nav__lable {
+                                                                        display: none;
+                                                                    }
+                                                                    
+                                                                    .bitmap {
+                                                                        background-image: url(../../../scoot/images/Bitmap.png);
+                                                                        height: 650px;
+                                                                        background-repeat: no-repeat;
+                                                                        background-size: cover;
+                                                                        background-position: center;
+                                                                        margin-top: 125px;
+                                                                        padding-top: 153px;
+                                                                        position: relative;
+                                                                        @include imgSecondform() {
+                                                                            background-image: url(../../../scoot/images/Bitmap@2x.png);
+                                                                            height: 663px;
+                                                                        }
+                                                                        @include tablet() {
+                                                                            background-image: url(../../../scoot/images/Bitmap-tablet.png);
+                                                                            height: 650px;
+                                                                            @include imgSecondform() {
+                                                                                background-image: url(../../../scoot/images/Bitmap@2x-tablet.png);
+                                                                                height: 780px;
+                                                                            }
+                                                                        }
+                                                                        @include mobile() {
+                                                                            background-image: url(../../../scoot/images/Bitmap-mobile.png);
+                                                                            height: 650px;
+                                                                            @include imgSecondform() {
+                                                                                background-image: url(../../../scoot/images/Bitmap@2x-mobile.png);
+                                                                                height: 1028px;
+                                                                            }
+                                                                        }
+                                                                        h1 {
+                                                                            font-family: $title-font;
+                                                                            font-size: 56px;
+                                                                            line-height: 56px;
+                                                                            letter-spacing: -2.5px;
+                                                                            color: $main-color;
+                                                                            margin-bottom: 40px;
+                                                                            max-width: 500px;
+                                                                            @include tablet() {
+                                                                                font-size: 56px;
+                                                                                line-height: 56px;
+                                                                                text-align: center;
+                                                                                letter-spacing: -2.5px;
+                                                                                max-width: 573px;
+                                                                                margin: 0 auto;
+                                                                            }
+                                                                            @include mobile() {
+                                                                                max-width: 311px;
+                                                                                font-size: 40px;
+                                                                                line-height: 40px;
+                                                                                text-align: center;
+                                                                                letter-spacing: -1.78571px;
+                                                                            }
+                                                                        }
+                                                                        .blockm {
+                                                                            @include centreItems();
+                                                                            justify-content: space-between;
+                                                                            max-width: 90%;
+                                                                            position: absolute;
+                                                                            left: -1px;
+                                                                            @include tablet() {
+                                                                                flex-direction: column;
+                                                                                margin: 0 auto;
+                                                                                align-items: center;
+                                                                            }
+                                                                            &__line {
+                                                                                max-width: 202px;
+                                                                                @include tablet() {
+                                                                                    display: none;
+                                                                                }
+                                                                            }
+                                                                            &__texts {
+                                                                                margin: 0 57px;
+                                                                                @include tablet() {
+                                                                                    text-align: center;
+                                                                                    margin: 0 140px;
+                                                                                }
+                                                                                &-decoration {
+                                                                                    font-size: 15px;
+                                                                                    line-height: 25px;
+                                                                                    color: $main-color;
+                                                                                    max-width: 405px;
+                                                                                    margin-bottom: 40px;
+                                                                                    @include tablet() {
+                                                                                        font-size: 15px;
+                                                                                        line-height: 25px;
+                                                                                        text-align: center;
+                                                                                        max-width: 573px;
+                                                                                        margin: 24px 0 32px 0;
+                                                                                    }
+                                                                                    @include mobile() {
+                                                                                        min-width: 311px;
+                                                                                        font-size: 15px;
+                                                                                        line-height: 25px;
+                                                                                        text-align: center;
+                                                                                    }
+                                                                                    // @include mobils() {
+                                                                                    //     max-width: 411px;
+                                                                                    // }
+                                                                                    // @include mobil() {
+                                                                                    //     max-width: 511px;
+                                                                                    // }
+                                                                                }
+                                                                            }
+                                                                            &__st {
+                                                                                max-width: 447px;
+                                                                                @include tablet() {
+                                                                                    margin-top: 220px;
+                                                                                    position: absolute;
+                                                                                    left: -127px;
+                                                                                }
+                                                                                @include mobile() {
+                                                                                    margin-top: 7px;
+                                                                                    left: -275px;
+                                                                                }
+                                                                                @include mobils() {
+                                                                                    margin-top: 330px;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    
+                                                                    .about {
+                                                                        background-image: url(../../../scoot/images/Bitmap-about.png);
+                                                                        height: 200px;
+                                                                        background-size: cover;
+                                                                        background-position: center;
+                                                                        background-repeat: no-repeat;
+                                                                        margin-top: 125px;
+                                                                        padding-top: 72px;
+                                                                        @include imgSecondform() {
+                                                                            background-image: url(../../../scoot/images/Bitmap@2x-about.png);
+                                                                        }
+                                                                        @include mobile() {
+                                                                            background-image: url(../../../scoot/images/Bitmap-about-mobile.jpg);
+                                                                            height: 160px;
+                                                                            @include imgSecondform() {
+                                                                                padding-top: 60px;
+                                                                                margin-top: 105px;
+                                                                                background-image: url(../../../scoot/images/Bitmap@2x-about-mobile.png);
+                                                                            }
+                                                                        }
+                                                                        .title {
+                                                                            font-family: $title-font;
+                                                                            font-size: 56px;
+                                                                            line-height: 56px;
+                                                                            letter-spacing: -2.5px;
+                                                                            color: $main-color;
+                                                                            @include tablet() {
+                                                                                display: none;
+                                                                            }
+                                                                            @include mobile() {
+                                                                                display: block;
+                                                                                text-align: center;
+                                                                            }
+                                                                        }
+                                                                        .rounds {
+                                                                            display: none;
+                                                                            @include tablet() {
+                                                                                position: relative;
+                                                                                @include centreItems();
+                                                                                justify-content: space-between;
+                                                                            }
+                                                                            @include mobile() {
+                                                                                display: none;
+                                                                            }
+                                                                            &__title {
+                                                                                font-family: $title-font;
+                                                                                font-size: 56px;
+                                                                                line-height: 56px;
+                                                                                letter-spacing: -2.5px;
+                                                                                color: $main-color;
+                                                                            }
+                                                                            &__round-flex {
+                                                                                @include centreItems();
+                                                                                column-gap: 24px;
+                                                                                @include tablet() {
+                                                                                    position: absolute;
+                                                                                    right: -42px;
+                                                                                }
+                                                                                &--round {
+                                                                                    border-radius: 50%;
+                                                                                    border: 3px solid $main-color;
+                                                                                    min-width: 62px;
+                                                                                    height: 62px;
+                                                                                }
+                                                                                &--white {
+                                                                                    border-radius: 50%;
+                                                                                    background-color: $main-color;
+                                                                                    min-width: 62px;
+                                                                                    height: 62px;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    
+                                                                    .careers {
+                                                                        background-image: url(../../../scoot/images/Bitmap-careers.png);
+                                                                        height: 200px;
+                                                                        background-size: cover;
+                                                                        background-position: center;
+                                                                        background-repeat: no-repeat;
+                                                                        margin-top: 125px;
+                                                                        padding-top: 72px;
+                                                                        @include imgSecondform() {
+                                                                            background-image: url(../../../scoot/images/Bitmap@2x-careers.png);
+                                                                        }
+                                                                        @include mobile() {
+                                                                            background-image: url(../../../scoot/images/Bitmap-careers-mobile.jpg);
+                                                                            height: 160px;
+                                                                            @include imgSecondform() {
+                                                                                padding-top: 60px;
+                                                                                margin-top: 105px;
+                                                                                background-image: url(../../../scoot/images/Bitmap@2x-careers-mobile.png);
+                                                                            }
+                                                                        }
+                                                                        .title {
+                                                                            font-family: $title-font;
+                                                                            font-size: 56px;
+                                                                            line-height: 56px;
+                                                                            letter-spacing: -2.5px;
+                                                                            color: $main-color;
+                                                                            @include tablet() {
+                                                                                display: none;
+                                                                            }
+                                                                            @include mobile() {
+                                                                                display: block;
+                                                                                text-align: center;
+                                                                            }
+                                                                        }
+                                                                        .rounds {
+                                                                            display: none;
+                                                                            @include tablet() {
+                                                                                position: relative;
+                                                                                @include centreItems();
+                                                                                justify-content: space-between;
+                                                                            }
+                                                                            @include mobile() {
+                                                                                display: none;
+                                                                            }
+                                                                            &__title {
+                                                                                font-family: $title-font;
+                                                                                font-size: 56px;
+                                                                                line-height: 56px;
+                                                                                letter-spacing: -2.5px;
+                                                                                color: $main-color;
+                                                                            }
+                                                                            &__round-flex {
+                                                                                @include centreItems();
+                                                                                column-gap: 24px;
+                                                                                @include tablet() {
+                                                                                    position: absolute;
+                                                                                    right: -42px;
+                                                                                }
+                                                                                &--round {
+                                                                                    border-radius: 50%;
+                                                                                    border: 3px solid $main-color;
+                                                                                    min-width: 62px;
+                                                                                    height: 62px;
+                                                                                }
+                                                                                &--white {
+                                                                                    border-radius: 50%;
+                                                                                    background-color: $main-color;
+                                                                                    min-width: 62px;
+                                                                                    height: 62px;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
