@@ -1,0 +1,153 @@
+.hovers {
+    margin-top: 96px;
+    @include mobils() {
+        text-align: center;
+    }
+    &__item {
+        margin-top: 24px;
+        @include centreItems();
+        justify-content: space-between;
+        max-width: 1110px;
+        background: #F2F5F9;
+        padding: 38px 64px 37px 40px;
+        @include mobils() {
+            padding: 36px 32px 32px 32px;
+            flex-direction: column;
+            row-gap: 16px;
+            margin: 16px auto 0 auto;
+            max-width: 311px;
+        }
+        &-inline {
+            &--link {
+                font-family: $title-font;
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -1.07143px;
+                color: $title-color;
+                text-decoration: none;
+                @include mobils() {
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-align: center;
+                    letter-spacing: -0.803571px;
+                }
+            }
+            &--side {
+                font-size: 15px;
+                line-height: 25px;
+                color: $title-color;
+                margin-top: 8px;
+                @include mobils() {
+                    font-size: 15px;
+                    line-height: 25px;
+                    text-align: center;
+                }
+            }
+        }
+        .btn {
+            min-width: 18%;
+        }
+    }
+}
+
+.hovers__item-inline--link:hover {
+    text-decoration: underline;
+}
+
+.hovers__item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 5%);
+}
+
+.faqs {
+    margin-top: 120px;
+    @include tablet() {}
+    &__title {
+        font-family: $title-font;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: -2.14286px;
+        color: $title-color;
+        @include mobils() {
+            font-size: 32px;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: -1.42857px;
+        }
+    }
+    &__block {
+        margin-top: 40px;
+        &_flex {
+            display: flex;
+            justify-content: space-between;
+            @include tablet() {
+                flex-direction: column;
+            }
+            &-title {
+                font-family: $title-font;
+                font-size: 40px;
+                line-height: 48px;
+                letter-spacing: -1.78571px;
+                color: $title-color;
+                @include tablet() {
+                    margin: 0 auto 12px auto;
+                }
+                @include mobils() {
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-align: center;
+                    letter-spacing: -1.07143px;
+                    min-width: 311px;
+                }
+            }
+            &-select {
+                max-width: 730px;
+                background: #F2F5F9;
+                padding: 32px 40px;
+                margin-top: 16px;
+                @include tablet() {
+                    margin: 16px auto 0 auto;
+                }
+                @include mobils() {
+                    min-width: 311px;
+                }
+                &--title {
+                    font-family: $title-font;
+                    font-size: 24px;
+                    line-height: 28px;
+                    letter-spacing: -1.07143px;
+                    color: $title-color;
+                    @include mobils() {
+                        max-width: 219px;
+                        font-size: 18px;
+                        line-height: 24px;
+                        letter-spacing: -0.803571px;
+                    }
+                }
+                &--decoration {
+                    font-size: 15px;
+                    line-height: 25px;
+                    max-width: 650px;
+                    color: #495567;
+                    margin-top: 24px;
+                    @include mobils() {
+                        min-width: 251px;
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flex-with-icon {
+    @include centreItems();
+    justify-content: space-between;
+}
+
+.m {
+    margin-top: 64px;
+}
