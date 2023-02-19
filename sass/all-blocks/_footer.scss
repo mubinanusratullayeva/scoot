@@ -1,0 +1,107 @@
+.before-foooter {
+    background-color: $title-color;
+    margin-top: 178px;
+    background-image: url(../icons/maskfooter.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    .foot {
+        background-image: url(../icons/round-footer.svg);
+        background-image: url(../icons/round-footer.svg);
+        background-repeat: repeat-x;
+        background-position-x: inherit;
+        background-position-y: bottom;
+        @include centreItems();
+        justify-content: space-between;
+        padding: 102px 0;
+        @include tablet() {
+            flex-direction: column;
+            row-gap: 40px;
+        }
+        &__title {
+            max-width: 415px;
+            font-family: $title-font;
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: -2.14286px;
+            color: $main-color;
+            @include tablet() {
+                text-align: center
+            }
+            @include mobile() {
+                max-width: 311px;
+                font-size: 32px;
+                line-height: 32px;
+                text-align: center;
+                letter-spacing: -1.42857px;
+            }
+        }
+        &__buttons {
+            @include centreItems();
+            justify-content: space-between;
+            min-width: 35%;
+            @include tablet() {
+                min-width: 40%;
+            }
+            @include mobile() {
+                min-width: 59%;
+            }
+            @include mobils() {
+                min-width: 73%;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #333A44;
+    padding: 35px 0 32px 0;
+    justify-content: space-between;
+    @include mobile() {
+        padding: 64px 0 88px 0;
+    }
+    .footer {
+        @include centreItems();
+        justify-content: space-between;
+        min-width: 1110px;
+        @include tablet() {
+            min-width: auto;
+        }
+        @include mobile() {
+            flex-direction: column;
+            row-gap: 41px;
+        }
+        &__menu {
+            @include centreItems();
+            justify-content: space-between;
+            min-width: 86%;
+            @include tablet() {
+                min-width: 77%;
+            }
+            @include mobile() {
+                flex-direction: column;
+                row-gap: 85px;
+            }
+            &_logos {
+                @include centreItems();
+                justify-content: space-between;
+                min-width: 11%;
+                @include tablet () {
+                    min-width: 17%;
+                }
+                @include mobile() {
+                    column-gap: 24px;
+                }
+            }
+        }
+    }
+}
+
+.o {
+    @include mobile() {
+        text-align: center;
+        font-size: 15px;
+        line-height: 25px;
+        color: $text-color;
+    }
+}
